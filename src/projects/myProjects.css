@@ -1,5 +1,4 @@
 .projects {
-    height: 30vh;
     margin: 2rem auto;
     padding-bottom: 2rem;
     width: 89%;
@@ -29,7 +28,6 @@
 
 .projectImg {
     width: 100%;
-    height: 40vh;
     object-fit: cover;
     border-radius: 0.3rem 0.3rem 0 0;
 }
@@ -52,6 +50,20 @@
 
 @media screen and (max-width: 768px) {
    .projects {
-       height: 40vh;
+       padding-bottom: 0;
+       margin-bottom: 0.5rem;
+   }
+
+   .myProjects__text {
+       font-size: 2.7rem;
+       margin-bottom: 0.5rem;
+   }
+
+   .grid__item-text {
+       font-size: 0.61rem;
+   }
+
+   .projects__grid {
+       margin-bottom: 0;
    }
 }

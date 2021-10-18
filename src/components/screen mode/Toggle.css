@@ -104,6 +104,12 @@
     }
 }
 
+@media screen and (max-width: 381px) {
+    .logo__icon {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 368px) {
     .logo__icon {
         display: none;
@@ -112,4 +118,5 @@
     .nav__list {
         right: 2.5rem;
     }
+    
 }

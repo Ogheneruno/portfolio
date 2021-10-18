@@ -33,7 +33,7 @@ const ContactMe = () => {
 
             <div className="contact__wrapper">
                 <div className="contacts-wrapper__left">
-                    <h2>Contact Info:</h2>
+                    <h2>Contact Info</h2>
                     <div className='contact__items'>
                         <img src={Address} alt="" className="img" />
                         <p className='contacts__text'>66, 4th Avenue, Gwarinpa, Abuja</p>
@@ -61,7 +61,7 @@ const ContactMe = () => {
                         </div>
                         <div className="contactme">
                             <label className='contactme__label' htmlFor="messasge">Message:</label>
-                            <textarea name="message" id="" cols="34" rows="10" placeholder="Type message..." required/>
+                            <textarea name="message" id="" cols="33" rows="10" placeholder="Type message..." required/>
                         </div>
                         <button className='contactme__button' type='submit'>Send</button>
                         {sent && " Message Sent, Thank You..."}

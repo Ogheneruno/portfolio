@@ -1,7 +1,6 @@
 .skills {
     width: 89%;
     margin: 3rem auto 0rem;
-    height: 50vh;
 }
 
 .skills__grid {
@@ -33,19 +32,29 @@
 
 @media screen and (max-width: 768px) {
     .skills {
-        margin-top: 26rem;
+        margin-top: 4rem;
+    }
+
+    .skills__grid {
+        font-size: 0.7rem;
     }
 }
 
 @media screen and (max-width: 734px) {
     .skills {
-        margin-top: 40rem;
+        font-size: 3rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    .skills__text {
+        font-size: 2.7rem;
     }
 }
 
 @media screen and (max-width: 590px) {
     .skills {
-        margin-top: 25rem;
+        margin-top: 4.5rem;
     }
 
     .skills__wrapper {
@@ -55,7 +64,7 @@
 
 @media screen and (max-width: 466px) {
     .skills {
-        margin-top: 22rem;
+        margin-top: 5rem;
     }
 
     .skills__wrapper {
@@ -63,14 +72,18 @@
     }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 380px) {
     .skills {
-        margin-top: 18rem;
+        margin-top: 5rem;
+    }
+
+    .copyright {
+        padding-left: 3px;
     }
 }
 
 @media screen and (max-width: 376px) {
     .skills {
-        margin-top: 26rem;
+        margin-top: 5rem;
     }
 }

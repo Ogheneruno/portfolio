@@ -1,6 +1,5 @@
 .intro {
     display: flex;
-    height: 100vh;
     padding-top: 0;
 }
 
@@ -106,14 +105,31 @@
 }
 
 @media screen and (max-width: 768px) {
+    .intro__desc {
+        font-size: 0.8rem;
+    }
+
+    .intro__greeting {
+        margin-bottom: 0;
+    }
+
+    .intro__text {
+        margin-top: 0.3rem;
+    }
+
+    .intro__title {
+        height: 30px;
+        padding: 0;
+    }
+
     .intro__bg {
         height: 100%;
-        top: 2rem;
         border-radius: 3.5rem;
     }
 
     .hire__button {
         margin-top: 1rem;
+        margin-bottom: 0;
     }
 
     
@@ -128,12 +144,20 @@
     .intro__bg {
         top: 3rem;
     }
+
+    .intro__greeting {
+        font-size: 40px;
+    }
 }
 
-@media screen and (max-width: 368px) {
+@media screen and (max-width: 380px) {
     .hire__button {
         margin-left: 4rem;
         margin-top: 1rem;
+    }
+
+    .intro__left__wrapper {
+        padding-top: 70px;
     }
 }
 

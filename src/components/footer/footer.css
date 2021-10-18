@@ -33,3 +33,28 @@ a {
     align-content: center;
 }
 
+@media screen and (max-width: 768px) {
+    .footer {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 381px) {
+    .footer {
+        font-size: 7px;
+        padding: 5px;
+    }
+
+    ul {
+        padding-right: 10px;
+    }
+
+    li {
+        margin-left: 10px;
+    }
+
+    .cc {
+        width: 9px;
+        height: 9px;
+    }
+}
