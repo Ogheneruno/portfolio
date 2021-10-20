@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: intro__left-title 10s ease-out infinite;
+    animation: intro__left-title 5s ease-out infinite;
 }
 
 @keyframes intro__left-title {
@@ -57,7 +57,7 @@
 .hire__button {
     display: inline-block;
     font-weight: 400;
-    height: 70%;
+    /* height: 70%; */
     line-height: 1.5;
     color: #ccc;
     text-align: center;
