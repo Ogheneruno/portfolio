@@ -1,5 +1,7 @@
 .intro {
     display: flex;
+    height: 95vh;
+    /* height: calc(90vh-4rem) !important; */
     padding-top: 0;
 }
 
@@ -15,7 +17,7 @@
     flex-direction: column;
     height: 30%;
     justify-content: space-between;
-    padding: 50px;
+    padding: 0.3rem 0.4rem 0;
 }
 
 .intro__greeting {
@@ -27,8 +29,8 @@
 .intro__text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.72rem;
-    padding: 1rem 20%;
-    margin-left: 10px;
+    padding: 1rem 23%;
+    /* margin-left: 10px; */
     margin-top: 2.5%;
     text-align: start;
 }
@@ -41,11 +43,13 @@
 
 .intro__desc {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100%;
+    /* height: 100%; */
+    font-size: 2rem;
+    /* color: #e9ada6; */
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: intro__left-title 5s ease-out infinite;
+    /* animation: intro__left-title 5s ease-out infinite; */
 }
 
 @keyframes intro__left-title {
@@ -70,12 +74,13 @@
     font-size: 1rem;
     border-radius: 0.25rem;
     width: 8rem;
-    margin-left: 35%;
+    margin-left: 39%;
     margin-top: 2.5%;
 }
 
 .hire__button:hover {
     background-color: #3f3d3d;
+    color: inherit;
 }
 
 .intro__title {
@@ -88,7 +93,7 @@
 
 .intro__bg{
     background-image: url(../pics/bg1.png);
-    border-radius: 2rem 0rem 1.5rem 3.5rem ;
+    border-radius: .5rem 0rem .5rem .5rem ;
     height: 100%;
     width: 100%;
     position: absolute;

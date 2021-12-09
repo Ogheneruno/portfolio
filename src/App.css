@@ -37,3 +37,28 @@
     transform: rotate(360deg);
   }
 }
+
+
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 45px;
+  background-color: #1c2024;
+  right: 85px;
+  bottom: 40px;
+  text-align: center;
+  line-height: 45px;
+  color: #fad0cb;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  /* opacity: 0; */
+  pointer-events: none;
+}
+
+.scroll-up-btn.show {
+  bottom: 40px;
+  opacity: 1;
+  pointer-events: auto;
+}

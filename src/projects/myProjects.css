@@ -1,13 +1,13 @@
 .projects {
-    margin: 2rem auto 0;
-    padding-bottom: 2rem;
-    width: 89%;
+    margin: auto;
+    width: 100%;
 }
 
 .projects__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
+    margin: 0 2rem;
 }
 
 .myProjects__text {
@@ -28,7 +28,8 @@
 
 .projectImg {
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: fill;
     border-radius: 0.3rem 0.3rem 0 0;
 }
 
@@ -39,6 +40,7 @@
     border-radius: 0 0 0.25rem 0.25rem;
     font-size: 1rem;
     font-weight: bold;
+    padding: 5px;
 }
 
 .projects__grid-item > a {
@@ -48,7 +50,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
    .projects {
        padding-bottom: 0;
        margin-bottom: 0.5rem;
@@ -66,4 +68,4 @@
    .projects__grid {
        margin-bottom: 0;
    }
-}
+} */
