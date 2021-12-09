@@ -18,10 +18,9 @@ const ContactMe = () => {
         e.preventDefault();
         e.target.reset();
 
-        emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, formRef.current, process.env.USER_ID)
-            .then(result => {
-                console.log(result.text);
-                setSent(true)
+        emailjs.sendForm('service_uud42zp', 'template_h51gjss', formRef.current, 'user_Ix3ptCs7XaO3YXlqhFvoY')
+            .then(() => {
+                setSent(true);
             }, err => {
                 console.log(err.text);
             });
