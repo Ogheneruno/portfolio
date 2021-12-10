@@ -1,8 +1,30 @@
 // import { useContext } from 'react';
+import { motion } from 'framer-motion';
 import View from '../components/View';
 import './skills.css';
 // import { ThemeContext } from '../context';
 
+
+const containerVarients = {
+    hidden: {
+        opacity: 0,
+        x: '100vw'
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { 
+            type: "tween", 
+            delay: 1.5,
+            mass: 0.4,
+            damping: 8
+        }
+    },
+    exit: {
+        x: '100vw',
+        transition: { ease: 'easeInOut' }
+    }
+}
 
 const Skills = () => {
     // const theme = useContext(ThemeContext);
@@ -11,7 +33,12 @@ const Skills = () => {
 
     return (
         <View>
-            <div className="skills" id="skills">
+            <motion.div className="skills" id="skills"
+                variants={containerVarients}
+                initial= "hidden"
+                animate= "visible"
+                exit= "exit"
+            >
 
                 <h1 className="skills__text"></h1>
 
@@ -92,7 +119,7 @@ const Skills = () => {
                         STRONG WRITTEN AND VERBAL COMMUNICATION
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </View>
     )
 }

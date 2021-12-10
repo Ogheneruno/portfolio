@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext } from 'react';
 import './Toggle.css';
 import { ThemeContext } from '../../context';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Sun from '../../pics/sun.png';
 import Moon from '../../pics/moon.png';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +10,7 @@ import Moon from '../../pics/moon.png';
 const Toggle = () => {
     const theme = useContext(ThemeContext);
     const [expanded, setExpanded] = useState(true);
-    const navigate = useNavigate();
+    const navigate = useHistory();
     // const navRef = React.useRef()
     // navRef.current = navBackground;
 

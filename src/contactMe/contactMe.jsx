@@ -5,7 +5,28 @@ import Address from '../pics/address.png';
 import Email from '../pics/email.png';
 import Phone from '../pics/phone.png';
 import View from '../components/View';
+import { motion } from 'framer-motion';
+import env from "react-dotenv";
 // import { ThemeContext } from '../context';
+
+
+
+const containerVarients = {
+    hidden: {
+        opacity: 0,
+        y: '-110vh'
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { type: "spring", delay: 1 }
+    },
+    exit: {
+        y: '100vh',
+        transition: { ease: 'easeInOut' }
+    }
+}
+
 
 
 const ContactMe = () => {
@@ -16,19 +37,27 @@ const ContactMe = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        e.target.reset();
 
         emailjs.sendForm('service_uud42zp', 'template_h51gjss', formRef.current, 'user_Ix3ptCs7XaO3YXlqhFvoY')
             .then(() => {
-                setSent(true);
+                setTimeout(() => {
+                    setSent(true);
+                }, 5000);
+                e.target.reset();
             }, err => {
                 console.log(err.text);
-            });
-    };
+            }
+        );
+    };    
 
     return (
         <View>
-            <div className="contacts" id="contactMe">
+            <motion.div className="contacts" id="contactMe"
+                variants={containerVarients}
+                initial= "hidden"
+                animate= "visible"
+                exit= "exit"
+            >
 
                 {/* <h1 className="contactMe__heading">Contact Me</h1> */}
 
@@ -69,7 +98,7 @@ const ContactMe = () => {
                         </form>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </View>
     )
 }

@@ -1,6 +1,6 @@
 .intro {
     display: flex;
-    height: 95vh;
+    /* height: 95vh; */
     /* height: calc(90vh-4rem) !important; */
     padding-top: 0;
 }
@@ -105,7 +105,7 @@
     height: 100%;
     object-fit: cover;
     position: relative;
-    top: 0;
+    top: -42px;
     width: 100%;
 }
 

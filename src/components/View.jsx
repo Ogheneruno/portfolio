@@ -6,7 +6,7 @@ const View = ({children}) => {
     return (
         <>
             <Toggle />
-            <div className="view" style={{height: '86.7vh', overflowY: 'hidden', transition: 'all 15s ease-out !important'}}>
+            <div className="view" style={{height: '86.7vh', overflowY: 'hidden', overflowX: 'hidden'}}>
                 {children}
             </div>
             <Footer />

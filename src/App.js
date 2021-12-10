@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import {useContext} from 'react';
 import './App.css';
 import Toggle from './components/screen mode/Toggle';
 import { ThemeContext } from './context';
@@ -8,24 +8,26 @@ import Projects from './projects/myProjects'
 import Skills from './skills/skills';
 import Footer from './components/footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route, Link } from "react-router-dom";
-import View from './components/View';
-
+import { Route, useLocation, Switch } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
   const theme = useContext(ThemeContext);
+  const location = useLocation();
 
   const { darkMode } = theme.state;
 
   return (
     <div className="App" style = {{ backgroundColor: darkMode ? '#000' : '#FDF6F0', color: darkMode && '#FDF6F0' }}>
-      <Routes>
-        <Route exact path="/" element={<Intro />}></Route>
-        {/* <Route path="/intro" element={<Intro />}></Route> */}
-        <Route path="/skills" element= {<Skills />}></Route>
-        <Route path="/myProjects" element= {<Projects />}></Route>
-        <Route path="/contactMe" element= {<ContactMe />}></Route>
-      </Routes>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route exact path="/" component={Intro}></Route>
+          {/* <Route path="/intro" element={<Intro />}></Route> */}
+          <Route path="/skills" component= {Skills}></Route>
+          <Route path="/myProjects" component= {Projects}></Route>
+          <Route path="/contactMe" component= {ContactMe}></Route>
+        </Switch>
+      </AnimatePresence>
       {/* <Toggle />
       <Intro />
       <Skills />
