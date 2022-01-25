@@ -16,7 +16,7 @@ const containerVarients = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: { type: "spring", delay: 1.5 }
+        transition: { type: "spring", delay: 1 }
     },
     exit: {
         y: '100vw',

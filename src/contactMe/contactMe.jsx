@@ -6,7 +6,7 @@ import Email from '../pics/email.png';
 import Phone from '../pics/phone.png';
 import View from '../components/View';
 import { motion } from 'framer-motion';
-import env from "react-dotenv";
+// import env from "react-dotenv";
 // import { ThemeContext } from '../context';
 
 
@@ -25,7 +25,23 @@ const containerVarients = {
         y: '100vh',
         transition: { ease: 'easeInOut' }
     }
-}
+};
+
+const buttonVariants = {
+    initial: {
+        x: '100vw'
+    },
+    animate: {
+        x: 0,
+        scale: 1.2,
+        transition: { delay: 1.5, 
+            type: 'spring', 
+            stiffness: 120, 
+        },
+        textShadow: '0px 0px 8px rgb(255, 255, 255)',
+        boxShadow: '0px 0px 8px rgb(255, 255, 255)',
+    },
+};
 
 
 
@@ -93,7 +109,11 @@ const ContactMe = () => {
                                 <label className='contactme__label' htmlFor="messasge">Message:</label>
                                 <textarea name="message" id="" cols="33" rows="10" placeholder="Type message..." required/>
                             </div>
-                            <button className='contactme__button' type='submit'>Send</button>
+                            <motion.button className='contactme__button' type='submit'
+                                variants={buttonVariants}
+                                initial= "initial"
+                                animate= "animate"
+                            >Send</motion.button>
                             {sent && " Message Sent, Thank You..."}
                         </form>
                     </div>

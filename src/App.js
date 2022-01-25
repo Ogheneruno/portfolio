@@ -1,12 +1,12 @@
 import {useContext} from 'react';
 import './App.css';
-import Toggle from './components/screen mode/Toggle';
+// import Toggle from './components/screen mode/Toggle';
 import { ThemeContext } from './context';
 import ContactMe from './contactMe/contactMe'
 import Intro from './intro/intro';
 import Projects from './projects/myProjects'
 import Skills from './skills/skills';
-import Footer from './components/footer/Footer';
+// import Footer from './components/footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, useLocation, Switch } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';

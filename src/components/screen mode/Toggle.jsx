@@ -1,16 +1,56 @@
-import React, {useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import './Toggle.css';
 import { ThemeContext } from '../../context';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Sun from '../../pics/sun.png';
 import Moon from '../../pics/moon.png';
+import { motion } from 'framer-motion';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+const logoVariants = {
+    initial: {
+        y: -250
+    },
+    animate: {
+        y: 0,
+        transition: { delay: 0.4, type: 'spring', stiffness: 10 }
+    },
+};
+
+const buttonVariants = {
+    initial: {
+        x: "-100px",
+    },
+    animate: {
+        x: 0,
+        transition: { delay: 0.7, duration: 1 }
+    },
+    exit: {
+        x: 0,
+    }
+};
+
+const menuVariants = {
+    whileHover: {scale: 1.11, transition: {type: 'spring', stiffness: 300}}
+};
+
+const hamburgerVariants = {
+    animate: {
+        x: 0,
+        transition: { delay: 1.5, type: 'spring', stiffness: 120 },
+        textShadow: '0px 0px 8px rgb(255, 255, 255)',
+        boxShadow: '0px 0px 8px rgb(255, 255, 255)',
+    },
+};
+
+
 
 
 const Toggle = () => {
     const theme = useContext(ThemeContext);
-    const [expanded, setExpanded] = useState(true);
-    const navigate = useHistory();
+    // const [expanded, setExpanded] = useState(true);
+    // const navigate = useHistory();
     // const navRef = React.useRef()
     // navRef.current = navBackground;
 
@@ -63,25 +103,32 @@ const Toggle = () => {
 
             <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
                 <div className="container">
-                    <Link className='navbar-brand' to='/'><span className="logo__icon">OO</span></Link>
-                    <button className='navbar-toggler' type='button' data-toggle='collapse'
+                    <Link className='navbar-brand' to='/'><motion.span className="logo__icon"
+                        variants={logoVariants}
+                        initial="initial"
+                        animate="animate"
+                    >OO</motion.span></Link>
+                    <motion.button className='navbar-toggler' type='button' data-toggle='collapse'
                     data-target="#navbarSuppportedContent" aria-controls='navbarnavbarSuppportedContent' aria-expanded='false'
-                    aria-label='Toggle navigation'>
-                        {expanded}
+                    aria-label='Toggle navigation' variants={hamburgerVariants} animate="animate">
                         <span className='navbar-toggler-icon'></span>
-                    </button>
+                    </motion.button>
 
                     <div className="collapse navbar-collapse" id="navbarSuppportedContent">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
+                        <motion.ul className="navbar-nav mr-auto"
+                            variants={buttonVariants}
+                            initial="initial"
+                            animate="animate"
+                        >
+                            <motion.li className="nav-item active" variants={menuVariants} whileHover="whileHover">
                                 <Link className="nav-link" to="/skills">Skills <span className="sr-only">(current)</span></Link>
-                            </li>
-                            <li className="nav-item">
+                            </motion.li>
+                            <motion.li className="nav-item" variants={menuVariants} whileHover="whileHover">
                                 <Link className="nav-link" to="/myProjects">Projects</Link>
-                            </li>
-                            <li className="nav-item">
+                            </motion.li>
+                            <motion.li className="nav-item" variants={menuVariants} whileHover="whileHover">
                                 <Link className="nav-link" to="/contactMe">Contact Me</Link>
-                            </li>
+                            </motion.li>
                             <li className="nav-item">
                                 <div className="toggle" onClick = { handleClick }>
                                     <img src={ Sun } alt="light" className="toggle__icon" />
@@ -89,7 +136,7 @@ const Toggle = () => {
                                     <div className="toggle__button" style = {{ left: theme.state.darkMode ? 0 : 25 }}></div>
                                 </div>
                             </li>
-                        </ul>
+                        </motion.ul>
                     </div>
                 </div>
             </nav>

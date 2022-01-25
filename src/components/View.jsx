@@ -6,7 +6,7 @@ const View = ({children}) => {
     return (
         <>
             <Toggle />
-            <div className="view" style={{height: '86.7vh', overflowY: 'hidden', overflowX: 'hidden'}}>
+            <div className="view" style={{height: 'calc(100vh - 6.55rem)', overflowY: 'hidden'}}>
                 {children}
             </div>
             <Footer />

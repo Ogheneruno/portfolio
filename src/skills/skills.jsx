@@ -8,7 +8,7 @@ import './skills.css';
 const containerVarients = {
     hidden: {
         opacity: 0,
-        x: '100vw'
+        x: 0
     },
     visible: {
         x: 0,
@@ -16,8 +16,7 @@ const containerVarients = {
         transition: { 
             type: "tween", 
             delay: 1.5,
-            mass: 0.4,
-            damping: 8
+            duration: 1.5
         }
     },
     exit: {
@@ -39,8 +38,6 @@ const Skills = () => {
                 animate= "visible"
                 exit= "exit"
             >
-
-                <h1 className="skills__text"></h1>
 
                 <div className="skills__wrapper">
                     <div className="skills__grid">

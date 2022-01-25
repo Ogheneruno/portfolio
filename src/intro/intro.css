@@ -20,6 +20,14 @@
     padding: 0.3rem 0.4rem 0;
 }
 
+.intro__pic {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 20rem;
+    width: 20rem;
+    margin: auto;
+}
+
 .intro__greeting {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 60px;
@@ -44,7 +52,7 @@
 .intro__desc {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* height: 100%; */
-    font-size: 2rem;
+    font-size: 1.5rem;
     /* color: #e9ada6; */
     display: flex;
     align-items: center;
@@ -62,7 +70,7 @@
     display: inline-block;
     font-weight: 400;
     /* height: 70%; */
-    line-height: 1.5;
+    line-height: 2.3;
     color: #ccc;
     text-align: center;
     text-decoration: none;
@@ -74,7 +82,7 @@
     font-size: 1rem;
     border-radius: 0.25rem;
     width: 8rem;
-    margin-left: 39%;
+    /* margin-left: 39%; */
     margin-top: 2.5%;
 }
 
@@ -111,7 +119,7 @@
 
 @media screen and (max-width: 768px) {
     .intro__desc {
-        font-size: 0.8rem;
+        font-size: 1.25rem;
     }
 
     .intro__greeting {
@@ -120,6 +128,7 @@
 
     .intro__text {
         margin-top: 0.3rem;
+        font-size: 0.89rem;
     }
 
     .intro__title {
@@ -132,18 +141,21 @@
         border-radius: 3.5rem;
     }
 
-    .hire__button {
+    .intro__right {
+        display: none;
+    }
+
+    /* .hire__button {
         margin-top: 1rem;
         margin-bottom: 0;
-    }
+    } */
 
     
 }
 
 @media screen and (max-width: 590px) {
     .hire__button {
-        margin-left: 5rem;
-        margin-top: 1rem;
+        font-size: 1.2rem;
     }
 
     .intro__bg {
@@ -156,10 +168,15 @@
 }
 
 @media screen and (max-width: 380px) {
-    .hire__button {
+    .intro__pic {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    /* .hire__button {
         margin-left: 4rem;
         margin-top: 1rem;
-    }
+    } */
 
     .intro__left__wrapper {
         padding-top: 70px;
